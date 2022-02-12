@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Drawing</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="hand.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+
+<style>
+  @media (max-width:830px) {
+    .logo{
+        display: none;
+    }
+
+    .mynavbar{
+        height: 50px;
+    }
+
+   
+    .topic{
+        flex-direction: column;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: rgba(17, 17, 17, 0.6);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        
+    }
+
+    .mynavbar-left, .topic{
+        align-items: flex-start;
+    }
+    .menu{
+        display: block;
+        padding: 15px;
+    }
+
+    .closebtn{
+        display: block;
+    }
+
+
+    .topic a{
+        padding: 8px;
+        text-decoration: none;
+        font-size: 25px;
+        color: rgb(236, 236, 236);
+        display: block;
+        transition: 0.3s;
+        
+}
+
+.topic a:hover {
+  color: #f1f1f1;
+}
+
+/* .active{
+        display: block;
+} */
+}
+  @media (max-width:1200px) {
+    .page1 .text {
+            font-size: 5em;
+            display: flex;
+            flex-direction: column;
+        }
+
+    .text h1{
+      padding: 100px 30px 0 30px;
+    }
+  }
+
+  @media (max-width:920px) {
+    .swiper-slide img{
+      width: 90%;
+      margin: auto;
+    }
+  }
+    @media (max-width:768px) {
+        .page1{
+            background: url(img/hand/hand-main2.jpg) no-repeat;
+            background-size: 100%;
+            background-position: center;
+
+        }
+        
+        .page1 .bottom{
+            float: none;
+        }
+
+        .page1 .text {
+            font-size: 3em;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .swiper{
+          padding: 25px 0;
+        }
+    }
+
+    @media (max-width:767px) {
+      .swiper-slide img{
+      width: 80%;
+      margin: auto;
+    }
+    .swiper-all h1{
+      font-size: 3em;
+    }
+
+    .page1{
+      margin-bottom: 60px;
+    }
+    }
+
+    @media (max-width:660px) {
+      .swiper-slide img{
+      width: 70%;
+      margin: auto;
+    }
+    }
+
+    @media (max-width:590px) {
+      .swiper-slide img{
+      width: 60%;
+      margin: auto;
+    }
+
+    .page1{
+      margin-bottom: 40px;
+    }
+
+    }
+
+    @media (max-width:500px) {
+      .swiper-slide img{
+      width: 50%;
+      margin: auto;
+    }
+
+    .page1 .text {
+            font-size: 2.5em;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    @media (max-width:410px) {
+      .swiper-slide img{
+      width: 40%;
+      margin: auto;
+    }
+    }
+
+</style>
+
+
+<body>
+  <nav class="mynavbar">
+    <div class="mynavbar-left"
+    ><a href="mainpage.html" style="text-decoration: none; color: #111;"><h2>LUNG</h2></a>
+    <div class="topic" id="nav-list">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="font-size: 40px;">&times;</a>
+        <a href="industral.html">Industrial Design</a>
+        <a href="metalsmithing.html">Metalsmithing</a>
+        <a href="digital.html">Digital Drawing</a>
+        <a href="hand.html">Hand Drawing </a> 
+        <!-- <a href="">UI Design</a> -->
+    </div>
+</div>
+   
+    <div class="logo">
+        <a href=""><i class="fab fa-facebook"></i></a>
+        <a href=""><i class="fab fa-twitter"></i></a>
+        <a href=""><i class="fab fa-instagram-square"></i></a>
+    </div>
+    <span class="menu" style="font-size:30px;cursor:pointer;" id="toggle-button" onclick="openNav()">&#9776;
+        <!-- <div class="menu-line"></div>
+        <div class="menu-line"></div>
+        <div class="menu-line"></div> -->
+        </span>
+</nav>
+
+    <div class="page1">
+        <div class="text">
+            <div class="text-top" data-aos="fade-down" data-aos-duration="1500" >
+        <h1 class="top">Hand</h1>
+            </div>
+            <div class="text-bottom" data-aos="fade-up"  data-aos-duration="1500">
+        <h1 class="bottom">Drawing</h1>
+            </div>
+        </div>
+        <!-- <img src="img/hand/hand-main.jpg" alt=""> -->
+        
+        <!-- <div class="picture">
+            
+            <img src="img/1x/hand1.png" alt="" class="p1">
+            <img src="img/1x/hand2.png" alt="" class="p2">
+            <img src="img/1x/hand3.png" alt="" class="p3">
+            <img src="img/1x/hand4.png" alt="" class="p4">
+            <img src="img/1x/hand5.png" alt="" class="p5">
+            <img src="img/1x/hand6.png" alt="" class="p6">
+        </div> -->
+    </div>
+
+    <div class="swiper-all">
+    <div class="top">
+        <div class="swiper-text">
+        <h1 class="txt">Needle pen</h1>
+        <!-- <span class="line"></span> -->
+        </div>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="img/hand/sleeping dragon.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/hand/eagle.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/hand/fox.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/hand/goat.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/hand/dog.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/hand/cat.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/hand/tree lani.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/hand/unicorn.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/hand/teemo.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/hand/lollol.jpg" />
+          </div>
+          
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+
+    <div class="bottom">
+    <div class="swiper-text">
+        <h1 class="txt">Copic</h1>
+        <!-- <span class="line"></span> -->
+        </div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="img/hand/ezreal.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/hand/shyvana.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/hand/yasuo.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/hand/varus.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/hand/AK472.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/hand/cat headphone.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/hand/wine.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/hand/oil lamp.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/hand/bao.jpg" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    </div>
+
+    <div class="footer">
+      <h2 style="font-family: Arial; font-style: italic; letter-spacing: 5px; color: rgb(220, 220, 220);">LUNG</h2>
+      <div class="footer_logo">
+          <a href=""><i class="fab fa-facebook"></i></a>
+          <a href=""><i class="fab fa-twitter"></i></a>
+          <a href=""><i class="fab fa-instagram-square"></i></a>
+      </div>
+      <div class="copy_right" style="margin-top: 5%; margin-left: 50%; text-align: center; transform: translateX(-50%);">
+      <p style="font-family: Arial;  letter-spacing: 2px; color: rgb(220, 220, 220);"> &copy; 2022 LUNG </p>
+      </div>
+  </div>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          coverflowEffect: {
+            rotate: 20,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows: false,
+            
+          },
+          });
+      </script>
+
+<script>
+  function openNav() {
+    document.getElementById("nav-list").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("nav-list").style.width = "0";
+  }
+  </script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>

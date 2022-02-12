@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industral</title>
+    <link rel="stylesheet" href="industral.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+</head>
+    
+<style>
+    @keyframes ani {
+        0%{
+            opacity: 0;
+        }
+
+        100%{
+            opacity: 1;
+        }
+    }
+
+    body{
+        animation: ani  1s ;
+    }
+
+    @media (max-width:830px) {
+    .logo{
+        display: none;
+    }
+
+    .mynavbar{
+        height: 50px;
+    }
+
+   
+    .topic{
+        flex-direction: column;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 300;
+        top: 0;
+        right: 0;
+        background-color: rgba(17, 17, 17, 0.7);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        
+    }
+
+    .mynavbar-left, .topic{
+        align-items: flex-start;
+    }
+    .menu{
+        display: block;
+        padding: 15px;
+    }
+
+    .closebtn{
+        display: block;
+    }
+
+
+    .topic a{
+        padding: 8px;
+        text-decoration: none;
+        font-size: 25px;
+        color: rgb(236, 236, 236);
+        display: block;
+        transition: 0.3s;
+        
+}
+
+.topic a:hover {
+  color: #f1f1f1;
+}
+
+/* .active{
+        display: block;
+} */
+}
+
+    @media (max-width:1420px) {
+        .oil-lamp-box{
+        width: 560px;
+        height: 376px;
+    }
+
+    .oil-lamp-box2{
+        width: 216px;
+        height: 288px;
+    }
+
+    .oil-right h1{
+        margin-top: 0;
+    }
+    }
+
+    @media (max-width:1360px) {
+        .title .design{
+            left: 80%;
+        }
+        .top h1{
+            font-size: 3em;
+            margin: 25px 0;
+        }
+    }
+
+    @media (max-width:1231px) {
+        .oil-lamp-box{
+        width: 420px;
+        height: 282px;
+    }
+
+    .oil-lamp-box2{
+        width: 162px;
+        height: 216px;
+    }
+
+    .oil-right h1{
+        font-size: 3em;
+        margin-top: 0;
+    }
+    .right-bottom p{
+        margin: 0;
+    }
+    .explain-3{
+        width: 444px;
+        height: 208px;
+    }
+
+    .explain-2{
+        width: 176px;
+        height: 192px;
+    }
+
+    .explain-1{
+        width: 125.6px;
+        height: 145.6px;
+    }
+    .explain-3 img, .explain-2 img, .explain-1 img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .img-demo{
+        width: 320px;
+        height: 320px;
+    }
+    .right-all .right-bottom{
+        width: 320px;
+    }
+    .right-all .img-item{
+        width: 75px;
+    }
+
+    .img-demo2{
+        width: 350px;
+        height: 350px;
+    }
+
+    .bottom-right .img-item2{
+        width: 72px;
+        height: 72px;
+        padding: 5px;
+    }
+
+    }
+    
+    @media (max-width:1000px) {
+        .title h1{
+            font-size: 1.7em;
+        }
+
+        .oil-lamp{
+            flex-direction: column;
+        }
+        .oil-right h1{
+            text-align: center;
+            top: -50%;
+        }
+
+        .oil-lamp-box{
+            margin: 0 auto;
+        }
+
+        .explain-3{
+        width: 333px;
+        height: 156px;
+    }
+
+    .explain-2{
+        width: 132px;
+        height: 144px;
+    }
+
+    .explain-1{
+        width: 94.2px;
+        height: 109.2px;
+    }
+
+    .img-demo{
+        width: 240px;
+        height: 240px;
+    }
+    .right-all .right-bottom{
+        width: 240px;
+    }
+    .right-all .img-item{
+        width: 55px;
+    }
+
+    .img-demo2{
+        width: 350px;
+        height: 350px;
+    }
+
+    .bottom-right .img-item2{
+        width: 72px;
+        height: 72px;
+        padding: 5px;
+    }
+    }
+
+    @media (max-width:850px) {
+        .page1 .title h1{
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+
+        .top h1{
+            font-size: 2.5em;
+            margin: 15px 0;
+        }
+    }
+
+    @media (max-width:800px) {
+        .explain-3{
+        width: 277.5px;
+        height: 120px;
+    }
+
+    .explain-2{
+        width: 110px;
+        height: 120px;
+    }
+
+    .explain-1{
+        width: 78.5px;
+        height: 91px;
+    }
+
+    .img-demo{
+        width: 200px;
+        height: 200px;
+    }
+    .right-all .right-bottom{
+        width: 200px;
+    }
+    .right-all .img-item{
+        width: 45px;
+    }
+
+    .img-demo2{
+        width: 280px;
+        height: 280px;
+    }
+
+    .bottom-right .img-item2{
+        width: 65px;
+        height: 65px;
+        padding: 5px;
+    }
+    .bottom-right h1{
+        font-size: 2.5em;
+    }
+    }
+
+    @media (max-width:750px) {
+        .page1 .title h1{
+            font-size: 1.45em;
+        }
+        .page1 .title .design{
+           margin-top: 280px;
+           left: 75%;
+           margin-right: 0;
+        }
+    }
+
+    @media (max-width:630px) {
+        .page1 .title h1{
+            font-size: 1.2em;
+            margin: 80px 20px 0 10px;
+        }
+        .page1 .title .design{
+           margin-top: 230px;
+           left: 75%;
+           margin-right: 0;
+        }
+
+        .top h1{
+            font-size: 1.8em;
+            margin: 10px 0;
+        }
+
+        .right-bottom p{
+            line-height: 25px;
+            font-size: 14px;
+        }
+
+        .page3 .bottom{
+            flex-direction: column;
+        }
+
+        .bottom .left, .bottom .right{
+            margin: 10px auto;
+        }
+
+        .pet-bottom{
+            flex-direction: column;
+        }
+
+        .page4{
+            padding: 100px 0;
+        }
+
+        .oil-lamp{
+            padding: 70px 0;
+        }
+    }
+
+    @media (max-width:550px) {
+        .oil-lamp-box{
+            width: 350px;
+            height: 235px;
+        }
+
+        .oil-lamp-box2{
+            margin: 0 20px;
+        }
+
+        .rwd_useword{
+            display: block;
+        }
+
+        .normal_useword{
+            display: none;
+        }
+
+        .bottom-right .right-bottom{
+            justify-content: space-between;
+        }
+
+        .oil-right p{
+            width: 250px;
+            padding: 0;
+        }
+
+        .oil-right{
+            margin: 0;
+        }
+
+        .page4{
+            padding: 50px 0;
+        }
+
+        .oil-lamp{
+            padding: 50px 0;
+        }
+    }
+
+    @media (max-width:510px) {
+        .page1 .title h1{
+            font-size: 1em;
+           
+        }
+        .page1 .title .design{
+           margin-top: 180px;
+           left: 75%;
+           margin-right: 0;
+        }
+
+        .oil-right p{
+            width: 200px;
+            padding: 0;
+        }
+
+        .top h1{
+            font-size: 1.2em;
+        }
+
+    }
+
+    @media (max-width:415px) {
+        .page1 .title h1{
+            font-size: 0.85em;
+            
+        }
+        .page1 .title .design{
+           margin-top: 150px;
+           left: 75%;
+           margin-right: 0;
+        }
+    }
+
+
+</style>
+<body>
+ 
+
+    <nav class="mynavbar">
+        <div class="mynavbar-left"
+        ><a href="mainpage.html" style="text-decoration: none; color: rgb(255, 255, 255);"><h2>LUNG</h2></a>
+        <div class="topic" id="nav-list">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="font-size: 40px;">&times;</a>
+            <a href="industral.html">Industrial Design</a>
+            <a href="metalsmithing.html">Metalsmithing</a>
+            <a href="digital.html">Digital Drawing</a>
+            <a href="hand.html">Hand Drawing </a> 
+            <!-- <a href="">UI Design</a> -->
+        </div>
+    </div>
+       
+        <div class="logo">
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-instagram-square"></i></a>
+        </div>
+        <span class="menu" style="font-size:30px;cursor:pointer;" id="toggle-button" onclick="openNav()">&#9776;
+    </nav>
+
+
+    <div class="page1">
+        <div class="title">
+        <h1 data-aos="fade-right" data-aos-duration="2000">Industral</h1>
+        <h1 class="design" data-aos="fade-down" data-aos-duration="2000">Design</h1>
+        </div>
+
+    <section id="particles-js"></section>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+    </div>
+
+
+    <div class="page2">
+        <div class="oil-lamp">
+            <div class="oil-lamp-box">
+            <img src="img/oil lamp.jpg" alt="" data-aos="fade-up">
+            </div>
+            <div class="oil-right" data-aos="fade-down">
+                <h1>Oil Lamp</h1>
+                <div class="right-bottom">
+                    <div class="oil-lamp-box2">
+                    <img src="img/oil-lamp-2.jpg" alt="">
+                    </div>
+                    <p class="normal_useword">In modern times, light bulbs are used to replace flames, and oil lamps are gradually declining. This product uses wood and bamboo to make the appearance of oil lamps. The light source uses a candle light bulb, which is suitable for home operation lights.</p>
+                    <p class="rwd_useword">This product uses wood and bamboo to make the appearance of oil lamps. The light source uses a candle light bulb, which is suitable for home operation lights.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page3">
+        <div class="chinese-lamp">
+            <div class="top" data-aos="fade-up">
+            <h1>Chinese Lamp</h1>
+            <img src="img/light-main.jpg" alt="">
+            </div>
+            <div class="bottom">
+                <div class="left" data-aos="fade-up"  data-aos-duration="500">
+                    <div class="explain-12">
+                    <div class="explain-1">
+                        <img src="img/1x/chinese-1.png" alt="">
+                        <!-- <p>Expanded view from top</p> -->
+                    </div>
+                    <div class="explain-2">
+                        <img src="img/1x/chinese-2.png" alt="">
+                        <!-- <p>Storage direction</p> -->
+                    </div>
+                    </div>
+                    <div class="explain-3">
+                        <img src="img/1x/chinese-3.png" alt="">
+                        <!-- <p>Exploded view</p> -->
+                    </div>
+                </div>
+                <div class="right" data-aos="fade-down"  data-aos-duration="500">
+                        <div class="right-all">
+                            <div class="right-top">
+                                <div class="img-demo">
+                                    <img src="img/1x/cl-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="right-bottom">
+            
+                                    <div class="img-item">
+                                        <img src="img/1x/cl-1.png" alt="">
+                                    </div>
+                                    <div class="img-item">
+                                        <img src="img/1x/cl-2.png" alt="">
+                                    </div>
+                                    <div class="img-item">
+                                        <img src="img/1x/cl-3.png" alt="">
+                                    </div>
+                                    <div class="img-item">
+                                        <img src="img/1x/cl-4.png" alt="">
+                                    </div>
+                                
+                            </div>
+                            <div class="click-here">
+                                <a href="#">Click here</a>
+                                <i class="fas fa-angle-up"></i>
+                            </div>
+                        </div>
+            
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+    <div class="page4">
+        <div class="pet">
+            <div class="pet-top"  data-aos="fade-up" >
+                <!-- <div class="pet-text">
+                <h1>Fur Baby!</h1>
+                <p>A detachable multifunctional pet stroller! The stowed stroller and multifunctional pet bag allow you to have everything with just this pet stroller</p>
+            </div> -->
+                <img src="img/pet.jpg" alt="">
+            </div>
+            <div class="pet-bottom">
+                <div class="bottom-left" data-aos="fade-up"  data-aos-duration="1000">
+                    <div class="img-demo2">
+                        <img src="img/1x/pet1.png" alt="">
+                    </div>
+                </div>
+                <div class="bottom-right" data-aos="fade-down"  data-aos-duration="1000">
+                    <h1>Features</h1>
+                    <div class="right-top">
+                        <div class="img-item2">
+                            <img src="img/1x/pet1.png" alt="">
+                        </div>
+                        <div class="img-item2">
+                            <img src="img/1x/pet2.png" alt="">
+                        </div>
+                        <div class="img-item2">
+                            <img src="img/1x/pet3.png" alt="">
+                        </div>
+                        </div>
+                        <div class="right-bottom">
+                        <div class="img-item2">
+                            <img src="img/1x/pet4.png" alt="">
+                        </div>
+                        <div class="img-item2">
+                            <img src="img/1x/pet5.png" alt="">
+                        </div>
+                        <div class="img-item2">
+                            <img src="img/1x/pet6.png" alt="">
+                        </div>
+                        </div>
+                        <div class="click-here">
+                            <a href="#">Click here</a>
+                            <i class="fas fa-angle-up"></i>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="page5">
+        <img src="img/ctrl.jpg" alt="">
+        <div class="ctrl">
+        <a href="ctrl.html" class="neon-button">Click here</a>
+        <p>to watch more about CTRL+</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h2 style="font-family: Arial; font-style: italic; letter-spacing: 5px; color: rgb(220, 220, 220);">LUNG</h2>
+        <div class="footer_logo">
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-instagram-square"></i></a>
+        </div>
+        <div class="copy_right" style="margin-top: 5%; margin-left: 50%; text-align: center; transform: translateX(-50%);">
+        <p style="font-family: Arial;  letter-spacing: 2px; color: rgb(220, 220, 220);"> &copy; 2022 LUNG </p>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script>
+        $('.img-item > img').click(function () {
+            const imgSrc = $(this).attr('src');
+            $('.img-demo > img').attr('src', imgSrc);
+        });
+    </script>
+     <script>
+        $('.img-item2 > img').click(function () {
+            const imgSrc = $(this).attr('src');
+            $('.img-demo2 > img').attr('src', imgSrc);
+        });
+    </script>
+
+
+    <script>
+        jQuery(document).ready(function(){
+   $('.title').mousemove(function(e){
+     var rXP = (e.pageX - this.offsetLeft-$(this).width()/2);
+     var rYP = (e.pageY - this.offsetTop-$(this).height()/2);
+     $('.title').css('text-shadow', +rYP/10+'px '+rXP/80+'px rgba(4,50,70,.8), '+rYP/8+'px '+rXP/60+'px rgba(60,150,170,1), '+rXP/70+'px '+rYP/12+'px rgba(120,180,215,.7)');
+   });
+});
+    </script>
+    <script>
+        function openNav() {
+          document.getElementById("nav-list").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("nav-list").style.width = "0";
+        }
+        </script>
+
+<script src="carousel.js"></script>
+<script>
+    AOS.init();
+  </script>
+    
+</body>
+</html>

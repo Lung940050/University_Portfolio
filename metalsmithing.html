@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metalsmithing</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="metal.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<style> 
+
+@media (max-width:830px) {
+    .logo{
+        display: none;
+    }
+
+    .mynavbar{
+        height: 50px;
+    }
+
+   
+    .topic{
+        flex-direction: column;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 300;
+        top: 0;
+        right: 0;
+        background-color: rgba(17, 17, 17, 0.7);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        
+    }
+
+    .mynavbar-left, .topic{
+        align-items: flex-start;
+    }
+    .menu{
+        display: block;
+        padding: 15px;
+    }
+
+    .closebtn{
+        display: block;
+    }
+
+
+    .topic a{
+        padding: 8px;
+        text-decoration: none;
+        font-size: 25px;
+        color: rgb(236, 236, 236);
+        display: block;
+        transition: 0.3s;
+        
+}
+
+.topic a:hover {
+  color: #f1f1f1;
+}
+
+/* .active{
+        display: block;
+} */
+}
+
+  @media (min-width:768px) and (max-width:1024px) {
+      .mynavbar{
+        max-width: 100vw;
+      }
+      .mynavbar .topic {
+        font-size: 0.8em;
+        text-align: center;
+      }
+      .page1 h1{
+          font-size: 6em;
+          letter-spacing: normal;
+      }
+  }
+
+
+  @media (max-width:1300px) {
+
+      .title h1{
+          font-size: 7em;
+      }
+
+      .white_box{
+        width: 270px;
+        height: 423px;
+        margin-left: 100px;
+        }
+
+
+      .randomright_box{
+            width: 630px;
+            height: 423px;
+        }
+
+      .page2 .random-text h1{
+         margin: 25px 0; 
+         font-size: 3.5em;
+      }
+
+      .page2 .random-text p{
+         margin-top: 310px;
+      }
+
+        .b-left{
+        width: 624px;
+        height: 344px;
+    }
+
+    .brass .b-right{
+        z-index: 100;
+        width: 514.8px;
+        height: 344px;
+        
+    }
+
+    .ring .ring-right{
+        width: 600px;
+        height: 400px;
+    }
+
+  }
+
+  @media (max-width:1140px) {
+
+    .title h1{
+          font-size: 6em;
+          letter-spacing: 8px;
+      }
+
+      .white_box{
+        width: 232.5px;
+        height: 352.5px;
+        margin-left: 100px;
+        }
+
+
+      .randomright_box{
+            width: 525px;
+            height: 352.5px;
+        }
+
+      .page2 .random-text h1{
+         margin: 15px 0; 
+         font-size: 3em;
+      }
+
+      .page2 .random-text p{
+         margin-top: 250px;
+      }
+
+      .name p{
+          padding: 0 35px;
+      }
+
+      .brass .text h1{
+          font-size: 3em;
+      }
+
+        .b-left{
+        width: 507px;
+        height: 273px;
+    }
+
+    .brass .b-right{
+        z-index: 100;
+        width: 410px;
+        height: 273px;
+        
+    }
+
+    .page5 .ring .ring-left{
+        margin-left: 8%;
+    }
+
+    .ring-left h1{
+        font-size: 3em;
+    }
+
+  }
+
+  @media (max-width:970px) {
+    .title h1{
+          font-size: 5em;
+          letter-spacing: 7px;
+      }
+
+
+      .white_box{
+        width: 170.5px;
+        height: 258.5px;
+        margin-left: 50px;
+        }
+
+
+      .randomright_box{
+            width: 385px;
+            height: 258.5px;
+        }
+
+      .page2 .random-text h1{
+         margin: 15px 0; 
+         font-size: 2.5em;
+      }
+
+      .page2 .random-text p{
+         margin-top: 180px;
+         line-height: 25px;
+         font-size: 14px;
+      }
+
+      .name p{
+          padding: 0 35px;
+      }
+
+      .brass .text h1{
+          font-size: 2.5em;
+      }
+
+      .brass .text p{
+          font-size: 14px;
+          line-height: 25px;
+      }
+
+        .b-left{
+        width: 507px;
+        height: 273px;
+    }
+
+    .brass .b-right{
+        z-index: 100;
+        width: 410px;
+        height: 273px;
+        
+    }
+
+    .page5 .ring .ring-left{
+        margin-left: 8%;
+    }
+
+    .ring-left h1{
+        font-size: 2.5em;
+    }
+
+    .ring-left p{
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .ring .ring-right{
+        width: 450px;
+        height: 300px;
+    }
+
+    .seaglass_box{
+    width: 128px;
+    height: 88px;
+}
+  }
+
+  @media (max-width:930px) {
+    .name p{
+        padding: 0 20px;
+        font-size: 14px;
+    }
+
+    .b-left{
+        width: 429px;
+        height: 237px;
+    }
+
+    .brass .b-right{
+        z-index: 100;
+        width: 355.5px;
+        height: 237px;
+        
+    }
+  }
+
+  @media (max-width:720px) {
+    .page2 .random{
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+
+      .random-text{
+          width: 50%;
+      }
+
+
+      .page2 .random-text p{
+         margin-top: 150px;
+         line-height: 25px;
+         font-size: 15px;
+      }
+
+      .randomright_box{
+          margin: 20px auto;
+          
+      }
+
+      .brass .b-right{
+          display: none;
+      }
+
+      .brass .text h1{
+          font-size: 2em;
+      }
+
+      .brass .text p{
+          margin-bottom: 0;
+      }
+  }
+
+  /* @media (max-width:768px) {
+      .page2 .random{
+          width: 100vw;
+          display: inline-block;
+          
+      }
+
+      .random img{
+          width: 100%;
+      }
+
+      .page3 .all .name p{
+          padding: 0 20px;
+          text-align: center;
+      }
+
+      .page4 .brass{
+          width: 100%;
+      }
+
+      .page4 .brass img{
+          width: 100%;
+      }
+
+      .page4 .brass .text{
+          left: 5%;
+      }
+
+      .page4 .brass .text h1{
+        color: #1E0E0C;
+      }
+
+      .page4 .brass .text p{
+        color: #1E0E0C;
+      }
+
+      .page5 .ring-right .line{
+          width: 80%;
+      }
+      .page5 .ring-right .line img{
+          width: 60%;
+          top: 15%;
+      }
+
+      .page5 .ring .ring-right{
+          width: 100vw;
+          margin: 0;
+      }
+
+      .ring-right img{
+          width: 100%;
+         
+      }
+
+      .page5 .ring .ring-left{
+          margin-left: 8%;
+          margin-right: 8%;
+          margin-top: 0;
+      }
+  } */
+
+
+  @media (max-width:650px) {
+      .page2, .page3, .page4, .page5{
+          margin: 50px 0;
+      }
+
+      .page1 .title h1{
+          font-size: 3em;
+          letter-spacing: 0.1em;
+      }
+
+      .page2 .random h1{
+          font-size: 2em;
+          margin: 10px 0;
+      }
+
+      .page2 .random p{
+          margin-top: 150px;
+          font-size: 0.08em;
+          letter-spacing: 0.2em;
+          line-height: 20px;
+      }
+
+     
+      .page3 .all .name p{
+          padding: 0 15px;
+          text-align: center;
+          font-size: 0.03em;
+          letter-spacing: 0.2em;
+          line-height: 15px;
+      }
+
+      .page3 h1{
+          font-size: 1.5em;
+      }
+
+      .page4 .brass{
+          justify-content: center;
+      }
+
+      .page4 .brass img{
+          width: 100%;
+      }
+
+      .page4 .brass .text{
+          left: 15%;
+      }
+
+      .page4 .brass .text h1{
+          font-size: 1.5em;
+        color: #1E0E0C;
+      }
+
+      .page4 .brass .text p{
+        margin: 5px 0;
+        color: #1E0E0C;
+        font-size: 0.06em;
+          letter-spacing: 0.2em;
+          line-height: 15px;
+
+      }
+
+      .seaglass_box{
+          width: 96px;
+          height: 66px;
+      }
+
+    
+      .page5 .ring .ring-right{
+          width: 300px;
+          height: 200px;
+          margin: 0;
+      }
+
+
+      .page5 .ring .ring-left{
+          margin-left: 3%;
+          margin-right: 3%;
+          margin-top: 0;
+      }
+
+   
+
+      .page5 .ring .ring-left h1{
+          font-size: 1.5em;
+          margin: 5px 0;
+      }
+
+      .page5 .ring .ring-left p{
+          font-size: 0.06em;
+          letter-spacing: 0.2em;
+          line-height: 20px;
+      }
+  }
+
+  @media (max-width:450px) {
+    .page2, .page3, .page4, .page5{
+          margin: 50px 0;
+      }
+
+      .page1 .title h1{
+          font-size: 2.5em;
+          letter-spacing: 0.1em;
+      }
+
+      .page2 .random h1{
+          font-size: 1.5em;
+          margin: 10px 0;
+      }
+
+      .randomright_box{
+          width: 350px;
+          height: 235px;
+      }
+
+      .white_box{
+          margin-left: 5px;
+      }
+
+      .page2 .random p{
+          margin-top: 150px;
+          font-size: 0.08em;
+          letter-spacing: 0.2em;
+          line-height: 20px;
+      }
+
+
+      .page3 h1{
+          font-size: 1.5em;
+      }
+
+      .all .name{
+          display: none;
+      }
+
+
+      .b-left{
+        width: 351px;
+        height: 194px;
+      }
+
+      .page4 .brass{
+          justify-content: center;
+      }
+
+      .page4 .brass .text{
+          left: 10%;
+      }
+
+      .brass .text h1{
+          margin-bottom: 5px;
+      }
+
+      .page4 .brass .text h1{
+          font-size: 1.5em;
+        color: #1E0E0C;
+      }
+
+      .page4 .brass .text p{
+        margin: 5px 0;
+        color: #1E0E0C;
+        font-size: 0.06em;
+          letter-spacing: 0.2em;
+          line-height: 15px;
+
+      }
+
+      .seaglass_box{
+          width: 80px;
+          height: 55px;
+      }
+
+    
+      .page5 .ring .ring-right{
+          width: 225px;
+          height: 150px;
+          margin: 0;
+      }
+
+
+      .page5 .ring .ring-left{
+          margin-left: 3%;
+          margin-right: 3%;
+          margin-top: 0;
+      }
+
+   
+
+      .page5 .ring .ring-left h1{
+          font-size: 1.5em;
+          margin: 5px 0;
+      }
+
+  }
+
+  
+
+
+</style>
+
+<body>
+    <nav class="mynavbar">
+        <div class="mynavbar-left"
+        ><a href="mainpage.html" style="text-decoration: none; color: rgb(255, 255, 255);"><h2>LUNG</h2></a>
+        <div class="topic" id="nav-list">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="font-size: 40px;">&times;</a>
+            <a href="industral.html">Industrial Design</a>
+            <a href="metalsmithing.html">Metalsmithing</a>
+            <a href="digital.html">Digital Drawing</a>
+            <a href="hand.html">Hand Drawing </a> 
+            <!-- <a href="">UI Design</a> -->
+        </div>
+    </div>
+       
+        <div class="logo">
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-instagram-square"></i></a>
+        </div>
+        <span class="menu" style="font-size:30px;cursor:pointer;" id="toggle-button" onclick="openNav()">&#9776;
+    </nav>
+
+
+    <div class="page1" data-aos="fade-down">
+        <div class="title">
+        <h1 data-aos="flip-up" data-aos-duration="3000">Metalsmithing</h1>
+        </div>
+        
+    </div>
+
+
+    <div class="page2">
+        <div class="random">
+            <div class="white_box">
+            <img src="img/radom-left.jpg" alt="" class="white" data-aos="fade-up">
+        </div>
+            <div class="random-text" >
+                <h1 style="z-index: 100;">Radom Fate</h1>
+                <p style="z-index: 100;">
+                    Dandelion drifting in the wind.<br>
+                    Where, will it go?<br>
+                    In the unseen world, is there any relationship pulling it?
+                </p>
+        
+            </div>
+            <div class="randomright_box">
+            <img src="img/radom-right.jpg" alt="" data-aos="fade-down">
+            </div>
+        </div>
+    </div>
+
+    <div class="page3" data-aos="fade-down">
+        <div class="all">
+            <div class="name">
+                <p>Azure Dragon </p>
+                <P>Black Tortoise</P>
+                <P>&nbsp;&nbsp; Kirin &nbsp;&nbsp;</P>
+                <P>White Tiger</P>
+                <P>Vermilion Bird</P>
+            </div>
+            <h1>Mythical beast’s Neck</h1>
+            <img src="img/neck.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="page4">
+        <div class="brass">
+            <div class="b-left" data-aos="fade-up" data-aos-duration="2000">
+            <img src="img/metal-knife.jpg" alt="">
+            </div>
+            <div class="text" data-aos="fade-down" data-aos-duration="2000">
+                <h1>Brass shuriken</h1>
+                <p>Shuriken made of brass, the blade can be stored
+                    for easy carrying.</p>
+            </div>
+            <div class="b-right">
+            <img src="img/metal-knife-hand.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="page5">
+        <div class="ring">
+           
+        <div class="ring-left" data-aos="fade-up" data-aos-duration="2000">
+            <div class="seaglass_box">
+            <img src="img/sea-glass.png" alt="">
+            </div>
+            <h1>Ring</h1>
+            <p>The gems are made by<br> 
+                polishing with sea glass.</p>
+        </div>
+        <div class="ring-right" data-aos="fade-down" data-aos-duration="2000">
+            <img src="img/metal-ring.jpg" alt="">
+                </div>
+        </div>
+    </div>
+    <div class="footer">
+        <h2 style="font-family: Arial; font-style: italic; letter-spacing: 5px; color: rgb(220, 220, 220);">LUNG</h2>
+        <div class="footer_logo">
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-instagram-square"></i></a>
+        </div>
+        <div class="copy_right" style="margin-top: 5%; margin-left: 50%; text-align: center; transform: translateX(-50%);">
+        <p style="font-family: Arial;  letter-spacing: 2px; color: rgb(220, 220, 220);"> &copy; 2022 LUNG </p>
+        </div>
+    </div>
+
+    <script>
+        function openNav() {
+          document.getElementById("nav-list").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("nav-list").style.width = "0";
+        }
+        </script>
+    <script>
+        AOS.init();
+      </script>
+
+
+
+</body>
+</html>

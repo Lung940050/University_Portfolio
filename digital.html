@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Drawing</title>
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="digital.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   
+
+</head>
+
+<style>
+   @media (max-width:830px) {
+    .logo{
+        display: none;
+    }
+
+    .mynavbar{
+        height: 50px;
+    }
+
+   
+    .topic{
+        flex-direction: column;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 300;
+        top: 0;
+        right: 0;
+        background-color: rgba(17, 17, 17, 0.7);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        
+    }
+
+    .mynavbar-left, .topic{
+        align-items: flex-start;
+    }
+    .menu{
+        display: block;
+        padding: 15px;
+    }
+
+    .closebtn{
+        display: block;
+    }
+
+
+    .topic a{
+        padding: 8px;
+        text-decoration: none;
+        font-size: 25px;
+        color: rgb(236, 236, 236);
+        display: block;
+        transition: 0.3s;
+        
+}
+
+.topic a:hover {
+  color: #f1f1f1;
+}
+
+/* .active{
+        display: block;
+} */
+}
+  @media (max-width:1200px) {
+    .bc-2{
+      display: block;
+    }
+
+    .bc{
+      display: none;
+    }
+
+    .sign{
+      font-size: 7em;
+    }
+  }
+
+  @media (max-width:960px) {
+    .sign{
+      font-size: 6em;
+    }
+
+    .bc6, .bc7, .bc8, .bc9, .bc10{
+    width: 620.8px;
+    height: 144px;
+    }
+
+    .bc6{
+    margin-top: 0;
+    /* padding-top: 8%; */
+}
+}
+
+@media (max-width:800px) {
+    .sign{
+      font-size: 5em;
+    }
+
+}
+
+
+  @media (max-width:768px) {
+
+    .page2 li{
+     list-style: none;
+     width: 23.5%;
+     height: 23.5%;
+     padding: 0.7%;
+ }
+  }
+
+  @media (max-width:700px) {
+    .sign{
+      font-size: 4em;
+      top: 40%;
+    }
+
+    .bc6, .bc7, .bc8, .bc9, .bc10{
+    width: 465.6px;
+    height: 108px;
+    }
+
+    .bc-2{
+      height: auto;
+    }
+
+}
+
+@media (max-width:540px) {
+    .sign{
+      font-size: 3em;
+      top: 35%;
+    }
+
+    .bc6, .bc7, .bc8, .bc9, .bc10{
+    width: 310.4px;
+    height: 72px;
+    }
+
+}
+
+@media (max-width:450px) {
+    .sign{
+      font-size: 2.5em;
+      top: 30%;
+    }
+
+}
+
+  @media (max-width:415px) {
+    .page2 li{
+     list-style: none;
+     width: 31.8%;
+     height: 31.8%;
+     padding: 0.7%;
+  }}
+
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+
+    .row {
+    margin: 10px;
+  }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    /* .column {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    } */
+
+    .row {
+    margin: 5px;
+  }
+
+  }
+</style>
+
+
+<body>
+  <nav class="mynavbar">
+    <div class="mynavbar-left"
+    ><a href="mainpage.html" style="text-decoration: none; color: rgb(255, 255, 255);"><h2>LUNG</h2></a>
+    <div class="topic" id="nav-list">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="font-size: 40px;">&times;</a>
+        <a href="industral.html">Industrial Design</a>
+        <a href="metalsmithing.html">Metalsmithing</a>
+        <a href="digital.html">Digital Drawing</a>
+        <a href="hand.html">Hand Drawing </a> 
+        <!-- <a href="">UI Design</a> -->
+    </div>
+</div>
+   
+    <div class="logo">
+        <a href=""><i class="fab fa-facebook"></i></a>
+        <a href=""><i class="fab fa-twitter"></i></a>
+        <a href=""><i class="fab fa-instagram-square"></i></a>
+    </div>
+    <span class="menu" style="font-size:30px;cursor:pointer;" id="toggle-button" onclick="openNav()">&#9776;
+</nav>
+
+    <div class="page1">
+      <div class="sign" >
+        <span class="fast-flicker"   data-aos="flip-up" data-aos-delay="1500" data-aos-duration="1000">Di</span>gi<span class="flicker"   data-aos="flip-up" data-aos-delay="1500" data-aos-duration="1000">tal</span>&nbsp;Drawing
+      </div>
+
+      <div class="bc">
+        <div class="bc1" data-aos="fade-down" >
+          <img src="img/1x/d1.png" alt="">
+        </div>
+        <div class="bc2" data-aos="fade-down"  data-aos-delay="300">
+          <img src="img/1x/d2.png" alt="">
+        </div>
+        <div class="bc3" data-aos="fade-down"  data-aos-delay="600">
+          <img src="img/1x/d3.png" alt="">
+        </div>
+        <div class="bc4" data-aos="fade-down"  data-aos-delay="900">
+          <img src="img/1x/d4.png" alt="">
+        </div>
+        <div class="bc5" data-aos="fade-down"  data-aos-delay="1200">
+          <img src="img/1x/d5.png" alt="">
+        </div>
+      </div>
+      
+
+      <div class="bc-2">
+        <div class="bc6" data-aos="fade-right">
+          <img src="img/dp1.jpg" alt="">
+        </div>
+        <div class="bc7"  data-aos="fade-left"  data-aos-delay="300">
+          <img src="img/dp2.jpg" alt="">
+        </div>
+        <div class="bc8" data-aos="fade-right"  data-aos-delay="600">
+          <img src="img/dp3.jpg" alt="">
+        </div>
+        <div class="bc9"  data-aos="fade-left"  data-aos-delay="900">
+          <img src="img/dp4.jpg" alt="">
+        </div>
+        <div class="bc10" data-aos="fade-right"  data-aos-delay="1200">
+          <img src="img/dp5.jpg" alt="">
+        </div>
+      </div>
+</div>
+
+<div class="page2">
+  <!-- Photo Grid -->
+  <div class="row" data-aos="fade-down" data-aos-duration="2000"> 
+    <div class="column">
+      <img src="img/drawing/Blue.jpg" style="width:100%;" >
+      <img src="img/drawing/girl1.jpg" style="width:100%">
+      <img src="img/drawing/Pink.jpg" style="width:100%">
+      <img src="img/drawing/girl6.jpg" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="img/drawing/girl2.jpg" style="width:100%">
+      <img src="img/drawing/Orange.jpg" style="width:100%">
+      <img src="img/drawing/girl3.jpg" style="width:100%">
+      <img src="img/drawing/Green.jpg" style="width:100%">
+    </div>  
+    <div class="column">
+      <img src="img/drawing/Red.jpg" style="width:100%">
+      <img src="img/drawing/boy2.jpg" style="width:100%">
+      <img src="img/drawing/White.jpg" style="width:100%">
+      <img src="img/drawing/girl5.jpg" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="img/drawing/boy1.jpg" style="width:100%">
+      <img src="img/drawing/Purple.jpg" style="width:100%">
+      <img src="img/drawing/girl4.jpg" style="width:100%">
+      <img src="img/drawing/Yellow.jpg" style="width:100%">
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2 style="font-family: Arial; font-style: italic; letter-spacing: 5px; color: rgb(220, 220, 220);">LUNG</h2>
+  <div class="footer_logo">
+      <a href=""><i class="fab fa-facebook"></i></a>
+      <a href=""><i class="fab fa-twitter"></i></a>
+      <a href=""><i class="fab fa-instagram-square"></i></a>
+  </div>
+  <div class="copy_right" style="margin-top: 5%; margin-left: 50%; text-align: center; transform: translateX(-50%);">
+  <p style="font-family: Arial;  letter-spacing: 2px; color: rgb(220, 220, 220);"> &copy; 2022 LUNG </p>
+  </div>
+</div>
+
+<script>
+  function openNav() {
+    document.getElementById("nav-list").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("nav-list").style.width = "0";
+  }
+  </script>
+
+  
+
+<script>
+  AOS.init();
+</script>
+
+  </body>
+</html>

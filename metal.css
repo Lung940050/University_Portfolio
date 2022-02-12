@@ -1,0 +1,376 @@
+body{
+    margin: 0px;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(31, 15, 13);
+}
+
+.page1{
+    height: auto;
+    width: 100%;
+    overflow-x: hidden;
+    background: url(img/metal-main.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+/* .page1 img{
+    max-width: 100%;
+} */
+
+.mynavbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 300;
+}
+
+.mynavbar-left, .topic, .logo{
+    display: flex;
+    align-items: center;
+    
+}
+
+.mynavbar-left{
+    margin: 0 20px ;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style: italic;
+    letter-spacing: 3px;
+    color: rgb(30, 30, 30);
+}
+
+.topic{
+    margin-left: 10px; 
+}
+
+.topic a{
+    padding: 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    letter-spacing: 1px;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+
+
+.logo{
+    margin-right: 20px;
+}
+.logo i{
+    padding: 0 10px;
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
+}
+
+.menu{
+    display: none;
+    z-index: 300;
+    color: white;
+}
+
+
+.closebtn{
+    display: none;
+}
+
+.page1 .title{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.title h1{
+    /* position: absolute; */
+    margin: 0;
+    font-size: 8em;
+    letter-spacing: 10px;
+    color: #fff;
+    font-weight: 700;
+    /* top: 50%;
+    transform: translatey(-50%); */
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    line-height: 100vh;
+
+    overflow:hidden;
+    background: linear-gradient(90deg, rgb(50, 28, 22), #fff, rgb(50, 28, 22));
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: metal 5s linear infinite;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.05);
+}
+
+@keyframes metal {
+    0% {
+        background-position: -500%;
+    }
+    100% {
+        background-position: 500%;
+    }
+}
+
+
+
+/* page1------------------------------- */
+/* page2------------------------------- */
+
+.page2{
+    margin: 150px 0;
+}
+
+.page2 .random{
+    display: flex;
+    justify-content: space-between;
+}
+
+.white_box{
+    width: 300px;
+    height: 470px;
+    margin-left: 100px;
+}
+
+
+
+.random .white {
+    height: 100%;
+    width: 100%;
+}
+
+.randomright_box{
+    width: 700px;
+    height: 470px;
+}
+
+.randomright_box img{
+    width: 100%;
+    height: 100%;
+}
+
+.random-text{
+    display: flex;
+    flex-direction: column;
+    /* position: absolute; */
+    left: 15%;
+    width: 10%;
+}
+
+
+
+.random-text h1{
+    position: absolute;
+    font-size: 4em;
+    color: #fff;
+}
+
+.random-text p{
+  position: absolute;
+  margin-top: 350px;
+  letter-spacing: 0.1em;
+  color: #fff;
+  line-height: 30px;
+}
+/* page2------------------------------- */
+/* page3------------------------------- */
+.page3{
+    width: 100%;
+    margin-bottom: 150px;
+}
+
+.all{
+    position: relative;
+ 
+}
+
+.all img{
+    width: 100%;
+}
+
+.all .name{
+    display: flex;
+    color: #fff;
+    position: absolute;
+    top: 20%;
+    justify-content: center;
+    width: 100%;
+    
+    
+
+}
+
+.name p{
+    padding: 0 80px;
+    letter-spacing: 0.1em;
+
+}
+
+.all h1{
+    font-size: 2.5em;
+    letter-spacing: 0.1em;
+    color: #fff;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+/* page3------------------------------- */
+/* page4------------------------------- */
+.page4{
+    width: 100%;
+    margin-bottom: 150px;
+}
+.page4 .brass{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+
+      
+}
+
+.brass .text{
+    z-index: 300;
+    position: absolute;
+    left: 45%;
+    bottom: 5%;
+    
+}
+
+.brass .text h1{
+    font-size: 4em;
+    color: #fff;
+    letter-spacing: 0.1em;
+    margin: 10px 0;
+}
+
+.brass .text p{
+    color: #fff;
+    letter-spacing: 0.1em;
+    line-height: 30px;
+    width: 80%;
+}
+
+.brass .b-left{
+    z-index: 200;
+}
+
+.b-left{
+    width: 780px;
+    height: 430px;
+}
+
+.b-left img{
+    width: 100%;
+    height: 100%;
+}
+
+.brass .b-right{
+    z-index: 100;
+    width: 624px;
+    height: 420px;
+    
+}
+
+.b-right img{
+    width: 100%;
+    height: 100%;
+    /* position: absolute ;
+    bottom: 0;
+    right: 0; */
+}
+/* page4------------------------------- */
+/* page5------------------------------- */
+.page5{
+    margin-bottom: 150px;
+    width: 100%;
+}
+
+.page5 .ring{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.seaglass_box{
+    width: 160px;
+    height: 110px;
+}
+
+.seaglass_box img{
+    width: 100%;
+    height: 100%;
+}
+
+.page5  .ring-right{
+   margin-right: 5%;
+   position: relative;
+   width: 750px;
+   height: 500px;
+}
+
+.ring-right img{
+    width: 100%;
+    height: 100%;
+}
+
+.page5 .ring .ring-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+
+
+.ring-left h1{
+    color: #fff;
+    font-size: 4em;
+    letter-spacing: 0.1em;
+    margin: 15px 0;
+}
+
+.ring-left p{
+    color: #fff;
+    letter-spacing: 0.1em;
+    line-height: 30px;
+}
+
+.line img{   /* 絕對有問題WWW  */
+   position: absolute;
+   bottom: 55%;
+   right: 55%;
+   width: 80%;
+}
+
+/* --------footer-------- */
+
+.footer{
+    height: 300px;
+    background-color: #111;
+    /* padding: 50px; */
+}
+
+.footer h2{
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgb(220, 220, 220); 
+}
+
+.footer_logo{
+    width: 200px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.footer_logo i{
+    color: rgb(220, 220, 220);
+    margin: 15px;
+    font-size: 20px;
+    
+}

@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTRL+</title>
+    <link rel="stylesheet" href="ctrl.css">
+    <link
+      rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    
+</head>
+<style>
+    @media (max-width:830px) {
+    .logo{
+        display: none;
+    }
+
+    .mynavbar{
+        height: 50px;
+    }
+
+   
+    .topic{
+        flex-direction: column;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: rgba(17, 17, 17, 0.6);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        
+    }
+
+    .mynavbar-left, .topic{
+        align-items: flex-start;
+    }
+    .menu{
+        display: block;
+        padding: 15px;
+    }
+
+    .closebtn{
+        display: block;
+    }
+
+
+    .topic a{
+        padding: 8px;
+        text-decoration: none;
+        font-size: 25px;
+        color: rgb(236, 236, 236);
+        display: block;
+        transition: 0.3s;
+        
+}
+
+.topic a:hover {
+  color: #f1f1f1;
+}
+
+/* .active{
+        display: block;
+} */
+}
+
+        @media (max-width:1400px) {
+            .video_box{
+            /* max-width: 100vw; */
+            max-height: 100vh;
+            overflow: hidden;
+            }
+
+            .bg-video {
+            margin:0 auto;
+            overflow:hidden;
+            width:auto;
+            opacity: 0.8;
+            height: 100vh;
+            }
+        }
+
+        @media (max-width:1200px) {
+            .page1-main .text h1{
+                font-size: 1.5em;
+            }
+
+            .text p{
+                max-width: 600px;
+            }
+
+            .text .text_s{
+                max-width: 600px;
+            }
+
+            .all-course p{
+                max-width: 350px;
+                line-height: 25px;
+            }
+
+            .card p{
+                line-height: 25px;
+            }
+
+            .book{
+                height: 350px;
+            }
+
+            .carousel, .carousel2, .carousel3{
+            width: 350px;
+            margin: auto;
+            }
+
+            .character, .item, .event{
+            width: 280px;
+            }
+
+            .carousel4, .carousel5, .carousel6{
+                width: 280px;
+            }
+
+            .page5 h2{
+                padding: 0 ;
+            }
+
+            .pre1, .pre2, .pre3, .pre4, .pre5, .start1, .start2, .start3, .start4, .start5{
+  
+                min-width: 300px;
+            }
+        }
+
+        @media (max-width:1020px) {
+            .book{
+                height: 300px;
+            }
+
+            .carousel, .carousel2, .carousel3{
+                width: 320px;
+            }
+
+            .all-course p{
+                font-size: 15px;
+                line-height: 22px;
+                max-width: 320px;
+            }
+
+            .card p{
+                font-size: 15px;
+                line-height: 22px;
+            }
+
+            .character, .item, .event{
+            width: 250px;
+            }
+
+            .carousel4, .carousel5, .carousel6{
+                width: 250px;
+            }
+        }
+
+        @media (max-width:850px) {
+            .page1-main .text h1{
+                font-size: 1.2em;
+            }
+
+            .card h2{
+                font-size: 1.2em;
+            }
+
+            .text p{
+                max-width: 520px;
+                font-size: 16px;
+            }
+
+            .text .text_s{
+                max-width: 520px;
+                line-height: 25px;
+                font-size: 13.5px;
+            }
+
+            .character, .item, .event{
+            width: 200px;
+            }
+
+            .carousel4, .carousel5, .carousel6{
+                width: 200px;
+            }
+
+            .card p{
+                font-size: 13px;
+                line-height: 20px;
+            }
+
+            .top-text{
+                flex-direction: column;
+                margin: auto 30px;
+            }
+
+            .top-text p{
+                width: 100%;
+            }
+
+            .page3 .rule p {
+              font-size: 10px;
+              line-height: 1.5em;
+            }
+
+            .intro .in-main{
+                width: 90%;
+            }
+
+            .page4 p, .page5 p{
+                line-height: 20px;
+            }
+        }
+
+
+      @media (max-width:700px) {
+            .course_inner{
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .all-course p{
+                width: 320px;
+            }
+
+            .book{
+                height: 250px;
+            }
+
+            .book_inner{
+                max-width: 100%;
+            }
+
+            .card{
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .character, .item, .event{
+                margin: auto;
+                width: 250px;
+            }
+            .carousel4, .carousel5, .carousel6{
+                width: 250px;
+            }
+
+            .text_right{
+                display: none;
+            }
+
+            .page1-main .text{
+                width: 100vw;
+                padding: 0;
+            }
+
+            .page1-main .text h1{
+                text-align: center;
+            }
+
+            .text p{
+                margin: 0 auto;
+                max-width: 500px;
+                max-height: 200px;
+                overflow-y: scroll;
+            }
+
+            .intro-left{
+                top: 20%;
+            }
+
+            .page4 p{
+                padding: 2px 0;
+                font-size: 12px;
+                width: 200px;
+                margin: 0;
+                
+            }
+
+            /* .intro-right .pic{
+                display: none;
+            } */
+
+            .intro-right{
+                width: 200px;
+                left: 60%;
+            }
+
+            .intro-right p{
+                padding-top: 10px;
+                width: 250px;
+                margin: 0;
+                
+            }
+
+            .intro .pic{
+                margin: auto;
+            }
+
+            .page4 .intro-right img{
+                width: 40%;
+                height: 40%;
+                margin: auto;
+            }
+            
+      }
+
+      @media (max-width:640px) {
+        .intro-right{
+                width: 180px;
+                left: 50%;
+            }
+
+            .intro-right p{
+                padding-top: 10px;
+                width: 180px;
+                line-height: 15px;
+                
+            }
+
+            .intro .pic{
+                margin: auto;
+            }
+
+            .page4 .intro-right img{
+                width: 40%;
+                height: 40%;
+                margin: auto;
+            }
+
+            .page5 h2{
+                margin: 20px 0;
+            }
+
+            .page4{
+            margin-bottom: 30px;
+        }
+      }
+
+      @media (max-width:550px) {
+        .page1-main .text h1{
+            font-size: 0.7em;        
+        }
+
+        .text p{
+            max-width: 300px;
+            font-size: 15px;
+        }
+      }
+
+      @media (max-width:500px) {
+        
+
+        .intro-left{
+                top: 10%;
+            }
+
+        .intro-right{
+                width: 180px;
+                left: 50%;
+            }
+
+            .intro-right p{
+                padding-top: 10px;
+                width: 180px;
+                line-height: 15px;
+                
+            }
+
+            .intro .pic{
+                margin: auto;
+            }
+
+            .page4 .intro-right img{
+                width: 30%;
+                height: 30%;
+                margin: auto;
+            }
+
+            h3{
+                font-size: 1em;
+            }
+      }
+
+      @media (max-width:420px) {
+          .page4{
+              margin-bottom: 50px;
+          }
+      }
+
+
+
+</style>
+<body>
+    <nav class="mynavbar">
+        <div class="mynavbar-left"
+        ><a href="mainpage.html" style="text-decoration: none; color: rgb(255, 255, 255);"><h2>LUNG</h2></a>
+        <div class="topic" id="nav-list">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="font-size: 40px;">&times;</a>
+            <a href="industral.html">Industrial Design</a>
+            <a href="metalsmithing.html">Metalsmithing</a>
+            <a href="digital.html">Digital Drawing</a>
+            <a href="hand.html">Hand Drawing </a> 
+            <!-- <a href="">UI Design</a> -->
+        </div>
+    </div>
+       
+        <div class="logo">
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-instagram-square"></i></a>
+        </div>
+        <span class="menu" style="font-size:30px;cursor:pointer;" id="toggle-button" onclick="openNav()">&#9776;
+            <!-- <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div> -->
+            </span>
+    </nav>
+
+
+    <div class="page1-main">
+
+        <div class="video_box" >
+            <div class="text_box" style="display: flex; flex-wrap: nowrap;">
+    
+                <div class="text" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1000"
+                >
+                    
+                <h1 class="ctrl">What is CTRL+ ?</h1>
+                <p>CTRL+ is a course designed with a focus on understanding about e-waste.</p>
+        
+                <p class="text_s">In 2019, 53.6 million tons of e-waste was generated globally, and the reuse rate was only 17.4%. However, most environmental education in Taiwan does not mention electronic products. Many people do not know the whereabouts and correct recycling channels of electronic products that are recycled and discarded. Therefore, I designed an e-waste lesson plan to let students understand the impact of e-waste on the environment and society and the correct recycling channels, And then deeply rooted in the importance of the concept of environmental protection.</p>
+                <!-- <h1 class="cvzx">C/V/Z/X</h1> -->
+                </div>
+        
+                <div class="text_right" style="color: white;" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1000"
+                >
+                    <p class="zxcv">CTRL+ Z/X/C/V</p>
+                </div>
+        
+                </div>
+        <video class="bg-video" src="img/mixkit-smoke-from-power-plant-4362.mp4" loop muted autoplay></video>
+        </div>  
+       
+        
+    </div>
+    <div class="page2">
+        <div class="all-course">
+        <div class="course1">
+
+            <div class="text">
+                <h3 style="text-align: center;">Course 1 - What is e-waste</h3>
+                
+            </div>
+            <div class="course_inner">
+      
+            <div class="book">
+                <img src="img/ctrl/1_noshadow/0.png" alt="">
+            </div>
+        
+        
+            <div class="book_inner">
+                <h4></h4>
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div  class="carousel-item"><img src="img/ctrl/1_noshadow/1.png" alt=""></div>
+                    <div  class="carousel-item"><img src="img/ctrl/1_noshadow/2.png" alt=""></div>
+                    <div  class="carousel-item"><img src="img/ctrl/1_noshadow/3.png" alt=""></div>
+                    <div  class="carousel-item"><img src="img/ctrl/1_noshadow/4.png" alt=""></div>
+                    <div  class="carousel-item"><img src="img/ctrl/1_noshadow/5.png" alt=""></div>
+                    <div  class="carousel-item"><img src="img/ctrl/1_noshadow/6.png" alt=""></div>
+                    <div  class="carousel-item"><img src="img/ctrl/1_noshadow/7.png" alt=""></div>
+                    <div  class="carousel-item"><img src="img/ctrl/1_noshadow/8.png" alt=""></div>
+                    <div  class="carousel-item"><img src="img/ctrl/1_noshadow/9.png" alt=""></div>
+                    <div  class="carousel-item"><img src="img/ctrl/1_noshadow/10.png" alt=""></div>
+                    <div  class="carousel-item"><img src="img/ctrl/1_noshadow/11.png" alt=""></div>
+                    <div  class="carousel-item"><img src="img/ctrl/1_noshadow/12.png" alt=""></div>
+                    <div  class="carousel-item"><img src="img/ctrl/1_noshadow/13.png" alt=""></div>
+                    <div  class="carousel-item"><img src="img/ctrl/1_noshadow/14.png" alt=""></div>
+                    <div  class="carousel-item"><img src="img/ctrl/1_noshadow/15.png" alt=""></div>
+
+                    
+                </div>
+                <div class="carousel-controls">
+                    <span class="prev"></span>
+                    <span class="next"></span>
+                </div>
+                <div class="carousel-indicators"></div>
+            </div>
+            <p>Understand what is e-waste and e-pollution, and what kind of impact and harm e-waste has on human society and nature, and resonate with students by focusing on life issues.
+            </p>
+
+        </div>
+    </div> 
+           
+        </div>
+            <div class="course2">
+                <div class="text">
+                    <h3 style="text-align: center;">Course 2 - What can we do for the earth</h3>
+                    
+                </div>
+                <div class="course_inner">
+          
+                <div class="book">
+                    <img src="img/ctrl/2_noshadow/0.png" alt="">
+                </div>
+            
+            
+                <div class="book_inner">
+                    <h4></h4>
+                <div class="carousel2">
+                    <div class="carousel-inner2">
+                        <div  class="carousel-item2"><img src="img/ctrl/2_noshadow/1.png" alt=""></div>
+                        <div  class="carousel-item2"><img src="img/ctrl/2_noshadow/2.png" alt=""></div>
+                        <div  class="carousel-item2"><img src="img/ctrl/2_noshadow/3.png" alt=""></div>
+                        <div  class="carousel-item2"><img src="img/ctrl/2_noshadow/4.png" alt=""></div>
+                        <div  class="carousel-item2"><img src="img/ctrl/2_noshadow/5.png" alt=""></div>
+                        <div  class="carousel-item2"><img src="img/ctrl/2_noshadow/6.png" alt=""></div>
+                        <div  class="carousel-item2"><img src="img/ctrl/2_noshadow/7.png" alt=""></div>
+                        <div  class="carousel-item2"><img src="img/ctrl/2_noshadow/8.png" alt=""></div>
+                    </div>
+                    <div class="carousel-controls2">
+                        <span class="prev2"></span>
+                        <span class="next2"></span>
+                    </div>
+                    <div class="carousel-indicators2"></div>
+                </div>
+                <p>Understand the main origin and reasons of e-waste, know why to recycle and reduce e-waste, and understand the recycling channels of various electronic products.
+
+    
+            </div>
+        </div> 
+            </div>
+            <div class="course3">
+                <div class="text">
+                    <h3 style="text-align: center;">Course 3 - We and E-waste</h3>
+                    
+                </div>
+                <div class="course_inner">
+          
+                <div class="book">
+                    <img src="img/ctrl/3_noshadow/0.png" alt="">
+                </div>
+            
+            
+                <div class="book_inner">
+                    <h4></h4>
+                <div class="carousel3">
+                    <div class="carousel-inner3">
+                        <div  class="carousel-item3"><img src="img/ctrl/3_noshadow/1.png" alt=""></div>
+                        <div  class="carousel-item3"><img src="img/ctrl/3_noshadow/2.png" alt=""></div>
+                        <div  class="carousel-item3"><img src="img/ctrl/3_noshadow/3.png" alt=""></div>
+                        <div  class="carousel-item3"><img src="img/ctrl/3_noshadow/4.png" alt=""></div>
+                        <div  class="carousel-item3"><img src="img/ctrl/3_noshadow/5.png" alt=""></div>
+                        <div  class="carousel-item3"><img src="img/ctrl/3_noshadow/6.png" alt=""></div>
+                        <div  class="carousel-item3"><img src="img/ctrl/3_noshadow/7.png" alt=""></div>
+                        <div  class="carousel-item3"><img src="img/ctrl/3_noshadow/8.png" alt=""></div>
+                        <div  class="carousel-item3"><img src="img/ctrl/3_noshadow/9.png" alt=""></div>
+                        <div  class="carousel-item3"><img src="img/ctrl/3_noshadow/10.png" alt=""></div>
+                        <div  class="carousel-item3"><img src="img/ctrl/3_noshadow/11.png" alt=""></div>
+                        <div  class="carousel-item3"><img src="img/ctrl/3_noshadow/12.png" alt=""></div>
+                        <div  class="carousel-item3"><img src="img/ctrl/3_noshadow/13.png" alt=""></div>
+                        <div  class="carousel-item3"><img src="img/ctrl/3_noshadow/14.png" alt=""></div>
+
+                    </div>
+                    <div class="carousel-controls3">
+                        <span class="prev3"></span>
+                        <span class="next3"></span>
+                    </div>
+                    <div class="carousel-indicators3"></div>
+                </div>
+                <p>Use the role-playing method of board games to let students think about the relationship between their own consumption behavior and the environment in the experience.
+
+    
+            </div>
+        </div> 
+            </div>
+        
+        </div>
+    </div>
+
+    <div class="page3">
+        <div class="top-text">
+            <p>In the course 3, we use discarded circuit boards as the game map to think about the relationship between us and the environment in the form of board game role-playing. During the game, players will act as environmentalists, black-hearted merchants and civilians respectively, collect waste through strategies, and direct the game to their own goals one by one.</p>
+            <p>Number of players - 6~10<br>
+                The best number of players - 6~8<br>
+                Suitable age - 12 years old and above<br>
+                Play time - 30~40 minutes<br>
+                Game type - strategy, environmental awareness</p>
+        </div>
+        <div class="rule">
+            <h2>Board game rules</h2>
+            <div class="pre">
+                <div class="pre1">
+                    <h3>Pre-game</h3>
+                    <img src="img/1x/pre1.png" alt="">
+                    <p>Spread out the game map.</p>
+                </div>
+                <div class="pre2">
+                    <h3>Part placement</h3>
+                    <img src="img/1x/pre2.png" alt="">
+                    <p>Place the parts on the blue 
+                        dots of the game platform, 
+                        about 20 pieces can be placed.</p>
+                </div>
+                <div class="pre3">
+                    <h3>Draw a role card</h3>
+                    <img src="img/1x/pre3.png" alt="">
+                    <p>One person plays one role.</p>
+                </div>
+                <div class="pre4">
+                    <h3>Draw function card</h3>
+                    <img src="img/1x/pre4.png" alt="">
+                    <p>One person draws five function cards.</p>
+                </div>
+                <div class="pre5"></div>
+            </div>
+
+            <div class="start">
+                <div class="start1">
+                    <h3>Start the game
+                    </h3>
+                    <img src="img/1x/start1.png" alt="">
+                    <p>The unscrupulous factory manager 
+                        starts the game for the first step, 
+                        and then proceeds to the right in 
+                        sequence.</p>
+                </div>
+                <div class="start2">
+                    <h3>Dice</h3>
+                    <img src="img/1x/start2.png" alt="">
+                    <p>Take turns to determine the 
+                        number of steps taken by 
+                        the dice, and the player will 
+                        take away the parts encountered
+                         on the road.</p>
+                </div>
+                <div class="start3">
+                    <h3>Use cards</h3>
+                    <img src="img/1x/start3.png" alt="">
+                    <p>At the end of your turn, you can 
+                        choose whether to use feature 
+                        cards.</p>
+                </div>
+                <div class="start4">
+                    <h3>End of each round</h3>
+                    <img src="img/1x/start4.png" alt="">
+                    <p>At the end of the round, everyone 
+                        except the factory director must 
+                        select a card from their hand and 
+                        give it to the factory director.</p>
+                </div>
+                <div class="start5">
+                    <h3>game over</h3>
+                    <p>The game is over and the 
+                        score is settled until all the
+                         parts are used up.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page4">
+        <h2>Map introduction</h2>
+        <div class="intro">
+        <div class="intro-left">
+            <p>The empty circuit map area, where the 
+                obtained parts can be placed.</p>
+                <p>After the game is over, you can store
+                    the parts and cards here.</p>
+        </div>
+        <img src="img/introduce.png" alt="" class="in-main">
+        <div class="intro-right">
+            <div class="pic">
+                <img src="img/1x/cir.png" alt="">
+                <img src="img/1x/per.png" alt="">
+                <!-- <p>The pieces are made from 
+                    electronic waste parts.</p> -->
+                
+            </div>
+            <p>When the game is starting, the player-controlled  
+                piece passes through a dot with a part, the player 
+                obtains the part.</p>
+        </div>
+        </div>
+    </div>
+
+    <div class="page5">
+        
+        <h2>Card introduction</h2>
+        <div class="card">
+            <div class="character">
+                <h2>Character card</h2>
+                <div class="carousel4">
+                    <div class="carousel-inner4">
+                        <div  class="carousel-item4"><img src="img/card/ch1.png" alt=""></div>
+                        <div  class="carousel-item4"><img src="img/card/ch2.png" alt=""></div>
+                        <div  class="carousel-item4"><img src="img/card/ch3.png" alt=""></div>
+                        <div  class="carousel-item4"><img src="img/card/ch4.png" alt=""></div>
+                        <div  class="carousel-item4"><img src="img/card/ch5.png" alt=""></div>
+                        <div  class="carousel-item4"><img src="img/card/ch6.png" alt=""></div>
+                        <div  class="carousel-item4"><img src="img/card/ch7.png" alt=""></div>
+                        <div  class="carousel-item4"><img src="img/card/ch8.png" alt=""></div>
+                        <div  class="carousel-item4"><img src="img/card/ch9.png" alt=""></div>
+                        <div  class="carousel-item4"><img src="img/card/ch10.png" alt=""></div>
+
+    
+                        
+                    </div>
+                    <div class="carousel-controls4">
+                        <span class="prev4"></span>
+                        <span class="next4"></span>
+                    </div>
+                    <div class="carousel-indicators4"></div>
+                </div>
+                <p>Each character has its own character
+                    description and exclusive skills.</p>
+                
+            </div>
+            <div class="item">
+                <h2>Item card</h2>
+                <div class="carousel5">
+                    <div class="carousel-inner5">
+                        <div  class="carousel-item5"><img src="img/card/it1.png" alt=""></div>
+                        <div  class="carousel-item5"><img src="img/card/it2.png" alt=""></div>
+                        <div  class="carousel-item5"><img src="img/card/it3.png" alt=""></div>
+                        <div  class="carousel-item5"><img src="img/card/it4.png" alt=""></div>
+                        <div  class="carousel-item5"><img src="img/card/it5.png" alt=""></div>
+                        <div  class="carousel-item5"><img src="img/card/it6.png" alt=""></div>
+                        <div  class="carousel-item5"><img src="img/card/it7.png" alt=""></div>
+                        <div  class="carousel-item5"><img src="img/card/it8.png" alt=""></div>
+                    </div>
+                    <div class="carousel-controls5">
+                        <span class="prev5"></span>
+                        <span class="next5"></span>
+                    </div>
+                    <div class="carousel-indicators5"></div>
+                </div>
+                <p>The event card is adapted from what 
+                    mayhappen in the real world, making 
+                    the overall game closer to reality.</p>
+            </div>
+            <div class="event">
+                <h2>Event card</h2>
+                <div class="carousel6">
+                    <div class="carousel-inner6">
+                        <div  class="carousel-item6"><img src="img/card/ev1.png" alt=""></div>
+                        <div  class="carousel-item6"><img src="img/card/ev2.png" alt=""></div>
+                        <div  class="carousel-item6"><img src="img/card/ev3.png" alt=""></div>
+                        <div  class="carousel-item6"><img src="img/card/ev4.png" alt=""></div>
+                        <div  class="carousel-item6"><img src="img/card/ev5.png" alt=""></div>
+                        <div  class="carousel-item6"><img src="img/card/ev6.png" alt=""></div>
+                        <div  class="carousel-item6"><img src="img/card/ev7.png" alt=""></div>
+                        <div  class="carousel-item6"><img src="img/card/ev8.png" alt=""></div>
+                        <div  class="carousel-item6"><img src="img/card/ev9.png" alt=""></div>
+                        <div  class="carousel-item6"><img src="img/card/ev10.png" alt=""></div>
+                    </div>
+                    <div class="carousel-controls6">
+                        <span class="prev6"></span>
+                        <span class="next6"></span>
+                    </div>
+                    <div class="carousel-indicators6"></div>
+                </div>
+                <p>The item card can help you frame 
+                    others, or help your teammates or 
+                    yourself to get more parts.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h2 style="font-family: Arial; font-style: italic; letter-spacing: 5px; color: rgb(220, 220, 220);">LUNG</h2>
+        <div class="footer_logo">
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-instagram-square"></i></a>
+        </div>
+        <div class="copy_right" style="margin-top: 5%; margin-left: 50%; text-align: center; transform: translateX(-50%);">
+        <p style="font-family: Arial;  letter-spacing: 2px; color: rgb(220, 220, 220);"> &copy; 2022 LUNG </p>
+        </div>
+    </div>
+    
+
+    <script>
+        function openNav() {
+          document.getElementById("nav-list").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("nav-list").style.width = "0";
+        }
+        </script>
+
+<script>
+    AOS.init();
+  </script>
+<script src="carousel_for_ctrl.js"></script>
+
+</body>
+</html>
