@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mainpage</title>
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="mainpage.css">
+    <link rel="stylesheet" href="style-marqee.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<style>
+    html{
+  scroll-behavior: smooth;
+}
+    @keyframes leaves { 
+       0% {             
+           transform: translate(0px, 0px);            
+        }            
+        5% {                
+           transform: translate(0px, -10px);            
+        }            
+        10% {                
+           transform: translate(0px, 0px);
+        }
+}
+
+.scroll i{
+    animation: leaves 3s ease-in-out 3s infinite alternate;
+    -webkit-animation: leaves 3s ease-in-out 3s infinite alternate;
+     -moz-animation: leaves 3s ease-in-out 3s infinite alternate;
+    -o-animation: leaves 3s ease-in-out 3s infinite alternate;
+}
+
+
+/* @keyframes slider-left {
+	0%,15% {
+	left:0;
+    }
+
+    50%,65% {
+	left:-600px;
+    }
+
+    100% {
+	left:-1200px;
+    }
+}
+
+.left-slider{
+    animation: slider-left 6s infinite;
+} */
+
+@media (max-width:1390px) {
+    .popular-slider{
+        width: 480px;
+        height: 320px;
+    }
+
+    .left .top-word h1{
+    font-size: 55px;
+    }
+
+    .right .top-word-r h1{
+    font-size: 55px;
+    top: -12%;
+    }
+
+    .new-slider{
+    width: 376px;
+    height: 552px;
+    }
+
+    .left{
+        margin: 50px 50px 50px 100px ;
+    }
+
+}
+
+@media (max-width:1130px) {
+    .left{
+        margin: 50px  ;
+    }
+    .marqee ul li{
+        font-size: 80px;
+    }
+}
+
+@media (max-width:1024px) and (min-width:910px) {
+    .popular-slider{
+        width: 420px;
+        height: 280px;
+    }
+
+    .left .top-word h1{
+    font-size: 48px;
+    top: 4%;
+    }
+
+    .right .top-word-r h1{
+    font-size: 48px;
+    top: -12%;
+    }
+
+    .new-slider{
+    width: 329px;
+    height: 483px;
+    }
+}
+
+@media (max-width:910px) and (min-width:830px)   {
+    .popular-slider{
+        width: 390px;
+        height: 260px;
+    }
+
+    .left .top-word h1{
+    font-size: 48px;
+    top: 4%;
+    }
+
+    .right .top-word-r h1{
+    font-size: 48px;
+    top: -12%;
+    }
+
+    .new-slider{
+    width: 305.5px;
+    height: 448.5px;
+    }
+
+    .left{
+        margin: 50px 40px  ;
+    }
+}
+
+
+@media (max-width:830px) {
+    .right{
+        display: none
+    }
+
+    /* .mynavbar{
+        max-width: 768px;
+    } */
+
+    .page2{
+        /* max-width: 768px; */
+        width: 100%;
+    }
+
+    .page2 .select{
+        max-height: 400px;
+    }
+
+.select img{
+    width: 100%;
+}
+
+.select h5{
+    height: 400px;
+}
+
+.left{
+    margin: 50px auto;
+}
+
+.aboutme .imguse img{ 
+    padding: 0 10px ;
+}
+
+}
+
+@media (max-width:830px) {
+    .logo{
+        display: none;
+    }
+
+    .mynavbar{
+        height: 50px;
+    }
+
+   
+    .topic{
+        flex-direction: column;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: rgba(17, 17, 17, 0.6);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        
+    }
+
+    .mynavbar-left, .topic{
+        align-items: flex-start;
+    }
+    .menu{
+        display: block;
+        padding: 15px;
+    }
+
+    .closebtn{
+        display: block;
+    }
+
+
+    .topic a{
+        padding: 8px;
+        text-decoration: none;
+        font-size: 25px;
+        color: rgb(236, 236, 236);
+        display: block;
+        transition: 0.3s;
+        
+}
+
+.topic a:hover {
+  color: #f1f1f1;
+}
+
+/* .active{
+        display: block;
+} */
+}
+
+@media (max-width:710px) {
+    .page2-2{
+    margin: 200px auto;
+}
+
+.page2-2 .aboutme{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.aboutme h1{
+    writing-mode:horizontal-tb;
+    margin-top: 80px;
+}
+
+.aboutme .imguse{
+    width: 50%;
+    margin: 0 auto; 
+}
+
+.aboutme .imguse img{ 
+    margin: 0 auto ;
+    width: 100%;
+    padding: 0;
+}
+
+.page2-2 .aboutme .word{
+    padding: 0 20px;
+    margin: auto;
+   
+}
+}
+
+@media (max-width:600px) {
+    .aboutme .imguse{
+    width: 65%;
+    margin: 0 auto; 
+}
+    .popular-slider{
+        width: 390px;
+        height: 260px;
+    }
+
+    .left .top-word h1{
+    font-size: 48px;
+    }
+
+    .marqee ul li{
+        font-size: 60px;
+    }
+}
+
+@media (max-width:415px) {
+    .aboutme h1{
+        font-size: 50px;
+    }
+
+    .aboutme .word{
+        font-size: 14px;
+    }
+
+    .right{
+        display: none
+    }
+
+    .page1 .top-word h1{
+        font-size: 3em;
+        width: 100vw;
+        top: 3%;
+    }
+
+    .popular-slider{
+        max-width: 300px;
+        height: 200px;
+    }
+
+    .popular-slider li{
+        width: 50%;
+    }
+
+    .popular-slider li img{
+        width: 50%;
+    }
+
+    .mynavbar{
+        max-width: 415px;
+    }
+
+    .marqee{
+        height: 100px;
+    }
+
+    .marqee ul li{
+        font-size:50px ;
+    }
+
+    .page2{
+        max-width: 415px;
+        width: 100%;
+    }
+
+    .page2 .select{
+        max-height: 300px;
+    }
+
+.select img{
+    width: 100%;
+}
+
+.select h5{
+    height: 300px;
+}
+
+.left{
+    margin: 50px auto;
+}
+
+.marqee ul li{
+        font-size: 40px;
+        margin-right:20px
+    }
+
+}
+
+
+</style>
+
+<body>
+<!-- header -->
+    <nav class="mynavbar">
+        <div class="mynavbar-left"
+        ><a href="mainpage.html" style="text-decoration: none; color: #111;"><h2>LUNG</h2></a>
+        <div class="topic" id="nav-list">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="font-size: 40px;">&times;</a>
+            <a href="industral.html">Industrial Design</a>
+            <a href="metalsmithing.html">Metalsmithing</a>
+            <a href="digital.html">Digital Drawing</a>
+            <a href="hand.html">Hand Drawing </a> 
+            <!-- <a href="">UI Design</a> -->
+        </div>
+    </div>
+       
+        <div class="logo">
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-instagram-square"></i></a>
+        </div>
+        <span class="menu" style="font-size:30px;cursor:pointer;" id="toggle-button" onclick="openNav()">&#9776;
+            <!-- <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div> -->
+            </span>
+    </nav>
+<!-- page1 -->
+    <div class="page1">
+    
+        <div class="all-slider">
+        <div class="left" data-aos="fade-down">
+            <div class="top-word">
+            <h1 class="ml3">
+                <span class="letter">P</span>
+                <span class="letter">o</span>
+                <span class="letter">P</span>
+                <span class="letter">u</span>
+                <span class="letter">l</span>
+                <span class="letter">a</span>
+                <span class="letter">r</span>
+            </h1>
+            </div>
+            <div class="popular-slider">
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <div  class="carousel-item"><img src="img/popular-slider-1.jpg" alt=""></div>
+                        <div  class="carousel-item"><img src="img/popular-slider-2.jpg" alt=""></div>
+                        <div  class="carousel-item"><img src="img/popular-slider-3.jpg" alt=""></div>
+                        <div  class="carousel-item"><img src="img/popular-slider-9.jpg" alt=""></div>
+                    </div>
+                    <div class="carousel-controls">
+                        <span class="prev"></span>
+                        <span class="next"></span>
+                    </div>
+                    <div class="carousel-indicators"></div>
+                </div>
+            </div>
+            <div class="about-box">
+                <div class="about">
+                    <a href="#page2-2" class="about_me">About me</a>
+                </div>
+            </div>
+            
+            <div class="scroll">
+                <a href="#">Scroll down</a>
+                <i class="fas fa-angle-down"></i>
+            </div>
+        </div>
+        <div class="right" data-aos="fade-down">
+            <div class="top-word-r">
+            <h1>New Update</h1>
+            </div>
+            <div class="new-slider">
+                <div class="carousel2">
+                    <div class="carousel-inner2">
+                        <div  class="carousel-item2"><img src="img/new-slider-1.jpg" alt=""></div>
+                        <div  class="carousel-item2"><img src="img/new-slider-2.jpg" alt=""></div>
+                        <div  class="carousel-item2"><img src="img/new-slider-3.jpg" alt=""></div>
+                        <div  class="carousel-item2"><img src="img/new-slider-4.jpg" alt=""></div>
+                    </div>
+                    <div class="carousel-controls2">
+                        <span class="prev2"></span>
+                        <span class="next2"></span>
+                    </div>
+                    <div class="carousel-indicators2"></div>
+                </div>
+        </div>
+
+        </div>
+    </div>
+
+</div>
+<!-- page2 -->
+<div class="page2">
+    <div class="marqee">
+        <ul>
+            <li>View </li>
+            <li>more </li>
+            <li>works </li>
+            <li>in </li>
+            <li>the </li>
+            <li>categories </li>
+            <li>below</li>
+        </ul>
+    </div>
+    <div class="selection" >
+        <div class="select box1" data-aos="flip-left">
+            <h5>
+                Industral Design
+            </h5>
+            <div class="hoveruse">
+            <a href="industral.html">
+                <img src="img/rectangle-1.jpg" alt="">
+            </a>
+        </div>
+        </div>
+        <div class="select box2" data-aos="flip-left" data-aos-delay="300">
+            <h5>
+                Metalsmithing
+            </h5>
+            <div class="hoveruse">
+            <a href="metalsmithing.html" class="rectangle">
+                <img src="img/rectangle-2.jpg" alt="">
+            </a>
+            </div>
+        </div>
+        <div class="select box3" data-aos="flip-left" data-aos-delay="600">
+            <h5>
+                Digital Drawing
+            </h5>
+            <div class="hoveruse">
+            <a href="digital.html">
+                <img src="img/rectangle-3.jpg" alt="">
+            </a>
+        </div>
+        </div>
+        <div class="select box4" data-aos="flip-left" data-aos-delay="900">
+            <h5>
+                Hand Drawing
+            </h5>
+            <div class="hoveruse">
+            <a href="hand.html" class="rectangle">
+                <img src="img/rectangle-4.jpg" alt="">
+            </a>
+            </div>
+        </div>
+        <!-- <div class="select box5">
+            <h5>
+                UI Design
+            </h5>
+            <div class="hoveruse">
+            <a href="" class="rectangle">
+                <img src="img/rectangle-4.jpg" alt="">
+            </a>
+            </div>
+        </div> -->
+    </div>
+
+    
+</div>
+<div class="page2-2" id="page2-2">
+    <div class="aboutme">
+        <h1>About me</h1>
+        <div class="imguse">
+            <img src="img/me.jpg" alt="">
+        </div>
+        <div class="word">
+            <p>Name- Hsin Tung</p>
+            <p>E-mail- cathy25538084@gmail.com</p>
+            <p>Graduate from- National Kaohsiung University <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;of 
+                Science and Technology -<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;
+                Department of Industrial Design</p>
+            <p>Design Skills- Illustrator, Photoshop, Indesign, <br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Clip studio, Procreate</p>
+            <p>Front end Skills- CSS, HTML</p>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <h2 style="font-family: Arial; font-style: italic; letter-spacing: 5px; color: rgb(220, 220, 220);">LUNG</h2>
+    <div class="footer_logo">
+        <a href=""><i class="fab fa-facebook"></i></a>
+        <a href=""><i class="fab fa-twitter"></i></a>
+        <a href=""><i class="fab fa-instagram-square"></i></a>
+    </div>
+    <div class="copy_right" style="margin-top: 5%; margin-left: 50%; text-align: center; transform: translateX(-50%);">
+    <p style="font-family: Arial;  letter-spacing: 2px; color: rgb(220, 220, 220);"> &copy; 2022 LUNG </p>
+    </div>
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script>
+        $('.slider-dots li').hover(function () {
+            console.log('hi', $(this));
+            
+            $(this).css('background', '#fff');
+            $(this).siblings().css('background', 'transparent');
+
+            const nowIndex = $(this).index();
+            const nowX = nowIndex * -600 + 'px';
+            console.log('nowX:', nowX);
+
+            // $('.imgs-wrap').css('transform', 'translatex(' + nowx + ')');
+
+            $('.left-slider').css('transform', `translateX(${nowX})`);
+
+        });
+
+        $('.slider-dots-r li').hover(function () {
+            console.log('hi', $(this));
+            
+            $(this).css('background', '#fff');
+            $(this).siblings().css('background', 'transparent');
+
+            const nowIndex = $(this).index();
+            const nowX = nowIndex * -470 + 'px';
+            console.log('nowX:', nowX);
+
+            // $('.imgs-wrap').css('transform', 'translatex(' + nowx + ')');
+
+            $('.right-slider').css('transform', `translateX(${nowX})`);
+
+        });
+
+        
+        
+        // const bodyheight = $('body').height();
+        // const windowheight = $(window).height();
+
+        // $(window).scroll(function (){
+        //     console.log('scrollTop:', $(window).scrollTop());
+
+        // const percent = Math.floor($(window).scrollTop() / (bodyheight - windowheight) * 100);
+
+        // // $('.header').css('height', percent + '%');
+
+        // if($(window).scrollTop() > 777) {
+        //     $('.topic', '.logo').css('color', '#fff').css('transform', '.5s');  
+        // }
+
+        // else($('.topic', '.logo').css('color', '#000'))
+        // })
+    </script>
+    
+
+    <!-- <script>
+        const toggleButton = document.getElementById('toggle-button');
+        const naviList = document.getElementById('nav-list');
+        toggleButton.addEventListener('click', () =>{
+            naviList.classList.toggle('active');
+        })
+    </script> -->
+
+    <script>
+        function openNav() {
+          document.getElementById("nav-list").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("nav-list").style.width = "0";
+        }
+        </script>
+
+<script src="carousel.js"></script>
+<script>
+    AOS.init();
+  </script>
+
+
+    
+</body>
+</html>
