@@ -480,6 +480,10 @@ body{
     text-align: center;
 }
 
+.imguse{
+    height: 400px;
+}
+
 .aboutme .word{
     margin: auto 0;
     font-size: 16px;
